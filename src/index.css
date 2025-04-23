@@ -1,1 +1,70 @@
+/* Craete global variables in the root scope for reusability */
+:root {
+  --custom-body-bg: #091a2f;
+  --custom-body-text-color: #faf7f7;
+  --custom-header-bg: rgba(255, 255, 255, 0.02);
+  --custom-gradient-start: #2768b4;
+  --custom-gradient-end: #112d4e;
+}
 
+/* Create separate utility classes */
+.main-bg-color {
+  background-color: var(--custom-body-bg) !important;
+}
+
+.header {
+  background-color: var(--custom-header-bg) !important;
+}
+
+.text-cust-color {
+  color: var(--custom-body-text-color);
+}
+
+/* Define the font weights and map them to real files from assets */
+/* Thin */
+@font-face {
+  font-family: 'Poppins';
+  src: url('src/assets/fonts/Poppins-Thin.ttf');
+  font-weight: 100;
+  font-style: normal;
+}
+/* Light */
+@font-face {
+  font-family: 'Poppins';
+  src: url('src/assets/fonts/Poppins-Light.ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+/* Regular */
+@font-face {
+  font-family: 'Poppins';
+  src: url('src/assets/fonts/Poppins-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+/* Medium */
+@font-face {
+  font-family: 'Poppins';
+  src: url('src/assets/fonts/Poppins-Medium.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+/* Bold */
+@font-face {
+  font-family: 'Poppins';
+  src: url('src/assets/fonts/Poppins-Bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Apply the fonts to whole body */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Global style for circle container, its applied to whole container and not to a specific circle that's why we define it in index.css*/
+.circle-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}

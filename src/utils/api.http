@@ -1,0 +1,38 @@
+### Get One User By Email
+GET http://yollstudentapi.com/api/users/email/dmytro%40yoll.io
+X-Secret-Token: qwerty
+
+### Register A New User
+POST http://yollstudentapi.com/api/users
+Content-Type: application/json
+
+{
+  "name": "Marek Benk",
+  "email": "marekbenk@brr.com"
+}
+
+### Get All Users
+GET http://yollstudentapi.com/api/users
+X-Secret-Token: qwerty
+
+### Create a new Contact
+POST http://yollstudentapi.com/api/user/contacts
+Content-Type: application/json
+
+{
+  "user_id": 25,
+  "full_name": "John Doe",
+  "phone_number": "123-456-7890",
+  "email": "john.doe@example.com",
+  "street": "123 Main St",
+  "city": "Anytown",
+  "state": "CA",
+  "postal_code": "90210",
+  "country": "USA",
+  "additional_info": "VIP client",
+  "base64_image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..."
+}
+
+### Get All Contacts
+GET http://yollstudentapi.com/api/user/contacts?user_id=25
+
